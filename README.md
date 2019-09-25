@@ -10,11 +10,11 @@ Ennemies :
 - Can follow the player.
 - Can hit the player when close enought.
 
-![alt text](https://github.com/SimonMoisan/Unity-FPS-Sandbox/blob/master/Screenshots/Screenshot1-min.PNG)
+![alt text](https://github.com/SimonMoisan/Unity-3D-Top-Down-Shooter-Sandbox/blob/master/Screenshots/Screenshot1-min.PNG)
 
-![alt text](https://github.com/SimonMoisan/Unity-FPS-Sandbox/blob/master/Screenshots/Screenshot2-min.PNG)
+![alt text](https://github.com/SimonMoisan/Unity-3D-Top-Down-Shooter-Sandbox/blob/master/Screenshots/Screenshot2-min.PNG)
 
-![alt text](https://github.com/SimonMoisan/Unity-FPS-Sandbox/blob/master/Screenshots/Screenshot3-min.PNG)
+![alt text](https://github.com/SimonMoisan/Unity-3D-Top-Down-Shooter-Sandbox/blob/master/Screenshots/Screenshot3-min.PNG)
 
 ## About this Git :
 
