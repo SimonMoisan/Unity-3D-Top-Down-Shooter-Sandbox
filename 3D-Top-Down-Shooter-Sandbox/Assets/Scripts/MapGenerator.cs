@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -8,6 +9,7 @@ public class MapGenerator : MonoBehaviour {
     [Header("Map caracteristics :")]
 	public int width;
 	public int height;
+    public int borderSize;
     [Range(0, 100)]
     public int randomFillPercent;
 
@@ -16,6 +18,8 @@ public class MapGenerator : MonoBehaviour {
 	public bool useRandomSeed;
 
     public GameObject player;
+    public Camera camera;
+    public NavMeshSurface surface;
 
     int[,] playeStartPosition;
 	int[,] map;
@@ -24,14 +28,18 @@ public class MapGenerator : MonoBehaviour {
     {
 		GenerateMap();
         SpawnPlayerRandomly();
-	}
+        surface.BuildNavMesh();
+    }
 
 	void Update()
     {
-		/*if (Input.GetMouseButtonDown(0)) {
+		/*if (Input.GetMouseButtonDown(0)) 
+        {
 			GenerateMap();
-		}*/
+		}
+        */
 	}
+
 
 	void GenerateMap()
     {
@@ -44,7 +52,6 @@ public class MapGenerator : MonoBehaviour {
 
 		ProcessMap ();
 
-		int borderSize = 1;
 		int[,] borderedMap = new int[width + borderSize * 2,height + borderSize * 2];
 
 		for (int x = 0; x < borderedMap.GetLength(0); x ++) {
@@ -77,7 +84,9 @@ public class MapGenerator : MonoBehaviour {
                 Vector3 pos = new Vector3(xPlayerPos - width/2, -4, zPlayerPos - height/2);
                 Quaternion rot = new Quaternion(0, 0, 0, 0);
 
+                Instantiate(camera, pos, rot);
                 Instantiate(player, pos, rot);
+
                 isSpawned = true;
             }
         }

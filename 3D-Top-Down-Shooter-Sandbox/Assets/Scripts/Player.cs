@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [Header("Movement caracteristics :")]
     [SerializeField] public float runSpeed;
     [SerializeField] public float walkSpeed;
-    [SerializeField] public float offset;
+    [SerializeField] public float positionOffset;
 
     [Header("Components :")]
     public Rigidbody rb;
@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Vector3 newPosition = new Vector3(pointToLook.x, pointToLook.y + offset, pointToLook.z);
+            Vector3 newPosition = new Vector3(pointToLook.x, pointToLook.y + positionOffset, pointToLook.z);
             transform.position = Vector3.MoveTowards(transform.position, newPosition, runSpeed * Time.deltaTime);
         }
     }

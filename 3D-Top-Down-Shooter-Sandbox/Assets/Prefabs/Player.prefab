@@ -1025,6 +1025,7 @@ GameObject:
   - component: {fileID: 31090701127362409}
   - component: {fileID: 89084626513704099}
   - component: {fileID: 8185796563177604632}
+  - component: {fileID: 8294522973831077118}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1083,7 +1084,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
@@ -1103,7 +1104,7 @@ MonoBehaviour:
   fireRate: 2
   runSpeed: 10
   walkSpeed: 5
-  offset: -4
+  positionOffset: 0
   rb: {fileID: 89084626513704099}
   animator: {fileID: 31090701127362409}
   camera: {fileID: 0}
@@ -1113,6 +1114,20 @@ MonoBehaviour:
   isMoving: 0
   isRunning: 0
   isShooting: 0
+--- !u!136 &8294522973831077118
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89084626513704101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.2917004
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0475998, z: 0}
 --- !u!1 &89093611732058237
 GameObject:
   m_ObjectHideFlags: 0
